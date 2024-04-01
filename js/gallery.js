@@ -107,10 +107,18 @@ gallery.addEventListener('click', event => {
         return
     }
 
-    console.log(event.target.dataset.source)
+    const currentImageLink = event.target.dataset.source;
+    // console.log(currentImageLink);
+
+    const imageLink = images.find((image) => image.original === currentImageLink)
+    // console.log(imageLink);
+
+    const imageModal = basicLightbox.create(`<img src="${imageLink.original}"/>`)
+
+    imageModal.show();
+});
 
 
-})
 
 
 
