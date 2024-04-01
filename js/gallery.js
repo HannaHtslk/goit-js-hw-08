@@ -100,4 +100,17 @@ const gallery = document.querySelector('.gallery');
 gallery.innerHTML = picturesArray.join('');
 
 
+gallery.addEventListener('click', event => {
+    event.preventDefault()
+
+    if (event.target === event.currentTarget) {
+        return
+    }
+
+    console.log(event.target.dataset.source)
+
+
+})
+
+
 
